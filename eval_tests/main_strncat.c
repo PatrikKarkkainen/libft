@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main_strncat.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 11:33:24 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/03 14:15:31 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/03 14:20:59 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/03 14:24:34 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-# include <string.h>
-# include <stdlib.h>
-size_t	ft_strlen(const char *str);
-char	*strdup(const char *string);
-char	*ft_strcpy(char *dest, const char *src);
-char	*ft_strncpy(char *dest, const char *src, size_t n);
-char	*ft_strcat(char *dest, const char *src);
-char	*ft_strncat(char *dest, const char *src, size_t n);
+int main ()
+{
+	char src[50], dest[50];
+	char *test;
 
-#endif
+	strcpy(src,  "This is source");
+	strcpy(dest, "This is destination");
+
+	test = ft_strncat(dest, src, 5);
+
+	printf("Final destination string : |%s|", dest);
+
+	return(0);
+}
