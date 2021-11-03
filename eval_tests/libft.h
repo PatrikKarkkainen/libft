@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 11:46:02 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/03 12:22:03 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/03 11:33:24 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/03 12:46:06 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-size_t	ft_strlen(const char *str)
-{
-	int	i;
+# include <string.h>
+# include <stdlib.h>
+size_t	ft_strlen(const char *str);
+char	*ft_strdup(const char *string);
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#endif
