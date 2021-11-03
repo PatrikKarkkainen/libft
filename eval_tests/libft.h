@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:33:24 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/03 12:46:06 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/03 12:57:29 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 size_t	ft_strlen(const char *str);
-char	*ft_strdup(const char *string);
+char	*strdup(const char *string);
+char	*ft_strcpy(char *dest, const char *src);
 
 #endif
