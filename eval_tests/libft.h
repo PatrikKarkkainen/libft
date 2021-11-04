@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:33:24 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/04 13:04:03 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/04 13:34:44 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 void	*ft_memset(void *str, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *str);
 char	*strdup(const char *string);
 char	*ft_strcpy(char *dest, const char *src);
