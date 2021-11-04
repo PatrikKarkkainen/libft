@@ -6,13 +6,14 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:33:24 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/04 13:52:02 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/04 14:23:55 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
 void	*ft_memset(void *str, int c, size_t n);
@@ -27,5 +28,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
 
 #endif

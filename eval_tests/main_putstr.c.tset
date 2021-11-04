@@ -1,0 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_putstr.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/04 14:24:15 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/04 14:31:08 by pkarkkai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+
+int	main()
+{
+	char *str;
+
+	str = "Hello World!";
+	ft_putstr(str);
+	return (0);
+}
