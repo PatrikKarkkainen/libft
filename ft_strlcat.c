@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:47:29 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/03 14:47:31 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/04 11:32:27 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst_size = ft_strlen(dst);
 	len = dst_size;
 	if (size == 0 || size < dst_size)
-		return (src_size + dst_size);
+		return (src_size + size);
 	else
 	{
 		while (src[i] && dst_size + i < size - 1)

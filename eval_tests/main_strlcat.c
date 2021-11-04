@@ -6,21 +6,20 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:48:14 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/03 14:48:19 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/04 11:32:40 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
-#include <bsd/string.h>
 
 int main()
 {
     char first[] = "This is ";
     char last[] = "a potentially long string";
     int r;
-    int size = 60;
+    int size = 2;
     char buffer[size];
 
     strcpy(buffer,first);
