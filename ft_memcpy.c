@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 12:15:14 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/04 13:52:20 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/04 13:53:56 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/04 14:09:44 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *string)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int		i;
-	int		len;
-	char	*str;
+	size_t	i;
 
 	i = 0;
-	len = ft_strlen(string);
-	str = (char *) malloc((len + 1) * sizeof(char));
-	while (string[i] != '\0')
+	while (((char *)src)[i] != '\0' && i < n)
 	{
-		str[i] = string[i];
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	if (((char *)src)[i] != '\0')
+	{
+		while(((char *)dest)[i] != '\0')
+					i++;
+	}
+	((char *)dest)[i] = '\0';
+	return ((char *)src);
 }
