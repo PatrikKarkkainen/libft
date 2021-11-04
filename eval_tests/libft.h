@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:33:24 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/03 14:15:31 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/04 11:49:26 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+char	*ft_strchr(const char *str, int c);
 
 #endif
