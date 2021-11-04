@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strchr.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 11:53:04 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/04 12:29:52 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/04 12:33:00 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/04 12:45:03 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int main ()
+char	*ft_strrchr(const char *str, int c)
 {
-	const char str[] = "Hello World!";
-	const char ch = '.';
-	char *ret;
+	int	i;
+	int	index;
 
-	ret = ft_strchr(str, ch);
-	printf("String after |%c| is - |%s|\n", ch, ret);
-
-	return (0);
+	i = 0;
+	index = -1;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			index = i;
+		i++;
+	}
+	if (index == -1)
+		return (0);
+	else
+		return ((char *)&str[index]);
 }
