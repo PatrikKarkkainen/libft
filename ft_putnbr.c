@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_putnbr.c                                      :+:      :+:    :+:   */
+/*   ft_putnbar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 14:42:33 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/04 15:00:18 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/04 14:45:46 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/04 15:02:26 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int	main()
+void	ft_putnbr(int n)
 {
-	int	i;
-	char c;
-    
-	i = 425;
-	while(i >= 10)
-    {
-        i = i / 10;
-    }
-	c = i + '0';
-	write(1, &c, 1);
-	return (0);
+	if (n == INT_MIN)
+	{
+		ft_putstr("-2147483648");
+	}
+	else if (n < 0)
+	{
+		ft_putchar('-');
+	}
+	else if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
 }
