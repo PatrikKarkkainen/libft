@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 13:53:56 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/05 12:08:37 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/05 11:44:34 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/05 12:05:16 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t	i;
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	while (((char *)src)[i] != '\0' && i < n)
 	{
 		((char *)dest)[i] = ((char *)src)[i];
+		if (((char *)src)[i] == c)
+			return (&dest[++i]);
 		i++;
 	}
 	if (((char *)src)[i] != '\0')
@@ -28,5 +30,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 			i++;
 	}
 	((char *)dest)[i] = '\0';
-	return ((char *)src);
+	 return (0);
 }
