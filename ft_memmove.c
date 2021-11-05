@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 13:53:56 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/05 12:43:57 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/05 12:28:18 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/05 12:47:50 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (((char *)src)[i] != '\0' && i < n)
+	while (i < n)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
+		((char *)str1)[i] = ((char *)str2)[i];
 		i++;
 	}
-	if (((char *)src)[i] != '\0')
+	if (((char *)str2)[i] != '\0')
 	{
-		while (((char *)dest)[i] != '\0')
+		while (((char *)str1)[i] != '\0')
 			i++;
 	}
-	((char *)dest)[i] = '\0';
-	return (src);
+	return (str1);
 }
