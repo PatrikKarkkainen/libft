@@ -10,4 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+int	main()
+{
+	char	*str;
+
+	str = "Hello World!";
+	ft_putendl(str);
+	return (0);
+}

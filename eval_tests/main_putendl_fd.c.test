@@ -10,4 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+int	main()
+{
+	char	*str;
+	int	fd;
+
+	str = "Hello World!";
+	fd = 2;
+	ft_putendl_fd(str, fd);
+	return (0);
+}
