@@ -6,8 +6,25 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:36:43 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:36:44 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/08 13:52:33 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int main ()
+{
+	char str[20] = "\v\f\r-2147483648";
+	int correct;
+	int user;
+   
+	correct = atoi(str);
+	printf("Correct: %d\n", correct);
+
+	user = ft_atoi(str);
+	printf("User: %d\n", user);
+	return(0);
+}
