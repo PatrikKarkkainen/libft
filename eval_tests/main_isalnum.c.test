@@ -1,13 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_isprint.c                                     :+:      :+:    :+:   */
+/*   main_isalnum.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 11:37:30 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:37:31 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/08 11:37:10 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/08 11:37:11 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
+int main ()
+{
+	int var = '.';
+	int correct;
+	int user;
+
+	correct = isalnum(var);
+	printf("Correct: %d\n", correct);
+
+	user = ft_isalnum(var);
+	printf("User: %d\n", user);
+	return (0);
+}

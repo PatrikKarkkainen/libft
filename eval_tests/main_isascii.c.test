@@ -1,13 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_toupper.c                                     :+:      :+:    :+:   */
+/*   main_isascii.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 11:37:40 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:37:41 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/08 11:37:20 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/08 11:37:22 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
+int main ()
+{
+	int var = 127;
+	int correct;
+	int user;
+
+	correct = isascii(var);
+	printf("Correct: %d\n", correct);
+
+	user = ft_isascii(var);
+	printf("User: %d\n", user);
+	return (0);
+}

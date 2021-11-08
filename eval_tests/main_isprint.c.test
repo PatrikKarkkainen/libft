@@ -1,13 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_isascii.c                                     :+:      :+:    :+:   */
+/*   main_isprint.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 11:37:20 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:37:22 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/08 11:37:30 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/08 11:37:31 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
+int main ()
+{
+	int var = 42;
+	int correct;
+	int user;
+
+	correct = isprint(var);
+	printf("Correct: %d\n", correct);
+
+	user = ft_isprint(var);
+	printf("User: %d\n", user);
+	return (0);
+}
