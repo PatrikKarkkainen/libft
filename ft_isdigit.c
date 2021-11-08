@@ -6,8 +6,16 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:28:19 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:28:21 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/08 14:12:45 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}

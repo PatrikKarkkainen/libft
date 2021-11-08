@@ -6,8 +6,16 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:28:10 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:28:11 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/08 14:08:01 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+int	ft_isalpha(int c)
+{
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	else
+		return (0);
+}

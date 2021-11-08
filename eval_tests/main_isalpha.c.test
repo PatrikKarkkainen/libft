@@ -1,13 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_isdigit.c                                     :+:      :+:    :+:   */
+/*   main_isalpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 11:37:02 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:37:04 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/08 11:36:55 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/08 14:08:08 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
+int main ()
+{
+	int	var = 'a';
+	int	correct;
+	int	user;
+
+	correct = isalpha(var);
+	printf("Correct: %d\n", correct);
+
+	user = ft_isalpha(var);
+	printf("User: %d\n", user);
+	return(0);
+}
