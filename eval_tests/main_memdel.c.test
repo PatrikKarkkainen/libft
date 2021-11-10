@@ -10,4 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
 
+int	main()
+{
+	void	*ptr;
+	void	**arr;
+
+	arr = (void**)malloc(sizeof(void*));
+	ptr = ft_memalloc(sizeof(int));
+	arr[0] = ptr;
+	*(int *)ptr = 42;
+
+	printf("%d\n", *(int *)ptr);
+	ft_memdel(arr);
+	printf("%d\n", *(int *)ptr);
+	return (0);
+}
