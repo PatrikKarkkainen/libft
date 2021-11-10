@@ -10,4 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
 
+void	ft_toup(char *c)
+{
+	write(1, &c[0], 1);
+}
+
+int	main()
+{
+	char	*str;
+	char	n;
+
+	str = "hello!";
+	n = '\n';
+	ft_striter(str, &ft_toup);
+	write(1, &n, 1);
+	return (0);
+}
