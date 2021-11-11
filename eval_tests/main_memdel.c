@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strdel.c                                      :+:      :+:    :+:   */
+/*   main_memdel.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 11:38:37 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:38:39 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/08 11:38:18 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/11 11:46:31 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 
 int	main()
 {
-	char	*ptr;
-	char	**arr;
+	void	*ptr;
 
-	arr = (char**)malloc(sizeof(char*));
-	ptr = ft_memalloc(sizeof(char) * 3);
-	arr[0] = ptr;
-	ptr = "42";
+	ptr = (void *)malloc(sizeof(int));
+	*(int *)ptr = 42;
 
-	printf("%s\n", ptr);
-	ft_strdel(arr);
-	printf("%s\n", ptr);
+	printf("%d\n", *(int *)ptr);
+	ft_memdel(&ptr);
+	//free(ptr);
+	if (ptr == NULL)
+		printf("This is null.");
+	else
+		printf("This is NOT null");
 	return (0);
 }

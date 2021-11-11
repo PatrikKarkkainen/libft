@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_memdel.c                                      :+:      :+:    :+:   */
+/*   main_strmap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 11:38:18 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:38:19 by pkarkkai         ###   ########.fr       */
+/*   Created: 2021/11/08 11:39:15 by pkarkkai          #+#    #+#             */
+/*   Updated: 2021/11/11 12:23:47 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
+char	ft_toup(char c)
+{
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
+}
+
 int	main()
 {
-	void	*ptr;
-	void	**arr;
+	char	*str;
+	char	*result;
+	char	n;
 
-	arr = (void**)malloc(sizeof(void*));
-	ptr = ft_memalloc(sizeof(int));
-	arr[0] = ptr;
-	*(int *)ptr = 42;
-
-	printf("%d\n", *(int *)ptr);
-	ft_memdel(arr);
-	printf("%d\n", *(int *)ptr);
+	str = "hello!";
+	n = '\n';
+	result = ft_strmap(str, &ft_toup);
+	printf("%s\n", result);
 	return (0);
 }
