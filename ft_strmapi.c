@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:30:35 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/11 12:29:03 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/11 13:11:51 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (s[len] != '\0')
 		len++;
 	str = (char *)malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (0);
 	while (s[i] != '\0')
 	{
 		str[i] = f(i, s[i]);
