@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:31:36 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/11 13:34:15 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/11 13:37:36 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[j++] = s1[i++];
 	}
 	i = 0;
-	while(s2[i] != '\0')
+	while (s2[i] != '\0')
 	{
 		str[j++] = s2[i++];
 	}
