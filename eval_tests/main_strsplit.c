@@ -10,4 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
 
+int	main()
+{
+	char	c;
+	char	*str;
+	char	**arr;
+
+	c = '*';
+	str = "Hello*World!";
+	arr = ft_strsplit(str, c);
+	while (*arr)
+	{
+		printf("%s\n", *arr);
+		arr++;
+	}
+	return (0);
+}

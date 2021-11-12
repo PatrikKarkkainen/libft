@@ -10,4 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
 
+int	main()
+{
+	int	i;
+	char	*str;
+
+	i = -42;
+	str = ft_itoa(i);
+	printf("%s\n", str);
+	return (0);
+}
