@@ -56,6 +56,7 @@ NAME = libft.a
 all: ${NAME}
 
 $(NAME): $(OBJS)
+	gcc -Wall -Wextra -Werror -c $(SRCS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
