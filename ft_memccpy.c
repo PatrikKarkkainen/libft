@@ -30,5 +30,5 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 			i++;
 	}
 	((char *)dest)[i] = '\0';
-	 return (0);
+	return (0);
 }
