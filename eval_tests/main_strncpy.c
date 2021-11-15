@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:28:40 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/03 13:46:58 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:17:01 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int main ()
 {
    char src[40];
    char dest[40];
-   char *test;
 
    memset(dest, '\0', sizeof(dest));
    strcpy(src, "He");

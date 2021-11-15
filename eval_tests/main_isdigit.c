@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:37:02 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 14:11:13 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:36:29 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,44 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int main ()
+void	test_isdigit()
 {
-	int	var = '3';
+	int	var;
 	int	correct;
 	int	user;
 
-	correct = isdigit(var);
-	printf("%d\n", correct);
+	printf("----FT_ISDIGIT----\n");
 
+	var = 'a';
+	correct = isdigit(var);
 	user = ft_isdigit(var);
-	printf("%d\n", user);
-	return(0);
+	if (correct == user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %d\n", correct);
+		printf("User: %d\n", user);
+	}
+
+	var = '4';
+	correct = isdigit(var);
+	user = ft_isdigit(var);
+	if (correct == user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %d\n", correct);
+		printf("User: %d\n", user);
+	}
+
+	var = '#';
+	correct = isdigit(var);
+	user = ft_isdigit(var);
+	if (correct == user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %d\n", correct);
+		printf("User: %d\n", user);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:41:36 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/15 12:59:37 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:38:35 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,57 +15,22 @@
 
 void	test_atoi();
 void	test_bzero();
+void	test_isalnum();
+void	test_isalpha();
+void	test_isascii();
+void	test_isdigit();
+void	test_isprint();
 
 int		main()
 {
-	test_atoi();
-	test_bzero();
+//	test_atoi();
+//	test_bzero();
+//	test_isalnum();
+//	test_isalpha();
+//	test_isascii();
+//	test_isdigit();
+	test_isprint();
 	return (0);
-}
-
-void	test_atoi()
-{
-	char *str;
-	int correct;
-	int user;
-
-	printf("----FT_ATOI----\n");
-
-	str = "-42";
-	correct = atoi(str);
-	user = ft_atoi(str);
-	if (correct == user)
-		printf("OK\n");
-	else
-	{
-		printf("KO\n");
-		printf("Correct: %d\n", correct);
-		printf("User: %d\n", user);
-	}
-
-	str = "\v\f\r-2147483648";
-	correct = atoi(str);
-	user = ft_atoi(str);
-	if (correct == user)
-		printf("OK\n");
-	else
-	{
-		printf("KO\n");
-		printf("Correct: %d\n", correct);
-		printf("User: %d\n", user);
-	}
-
-	str = "++++++--------256";
-	correct = atoi(str);
-	user = ft_atoi(str);
-	if (correct == user)
-		printf("OK\n");
-	else
-	{
-		printf("KO\n");
-		printf("Correct: %d\n", correct);
-		printf("User: %d\n", user);
-	}
 }
 
 void	test_bzero()
