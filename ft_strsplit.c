@@ -6,13 +6,13 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:31:53 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:31:54 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/15 12:29:56 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_splitlen(char const *s, char c)
+int		ft_splitlen(char const *s, char c)
 {
 	int	i;
 	int	result;
@@ -27,7 +27,7 @@ int	ft_splitlen(char const *s, char c)
 	return (result);
 }
 
-int	ft_strcount(char const *s, char c)
+int		ft_strcount(char const *s, char c)
 {
 	int	i;
 	int	result;

@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:15:14 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/04 13:52:20 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/15 12:25:00 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *string)
 
 	i = 0;
 	len = ft_strlen(string);
-	str = (char *) malloc((len + 1) * sizeof(char));
+	str = (char *)malloc((len + 1) * sizeof(char));
 	while (string[i] != '\0')
 	{
 		str[i] = string[i];
