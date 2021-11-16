@@ -21,6 +21,7 @@ void	ft_putnbr(int n)
 	else if (n < 0)
 	{
 		ft_putchar('-');
+		ft_putnbr(n * -1);
 	}
 	else if (n > 9)
 	{
