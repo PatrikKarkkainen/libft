@@ -12,11 +12,7 @@
 
 #include "libft.h"
 
-<<<<<<< HEAD
 static int	ft_splitlen(char const *s, char c)
-=======
-int		ft_splitlen(char const *s, char c)
->>>>>>> 5090eed8bcffc8250bd45d334b6686b6e399a008
 {
 	int	i;
 	int	result;
@@ -31,11 +27,7 @@ int		ft_splitlen(char const *s, char c)
 	return (result);
 }
 
-<<<<<<< HEAD
 static int	ft_strcount(char const *s, char c)
-=======
-int		ft_strcount(char const *s, char c)
->>>>>>> 5090eed8bcffc8250bd45d334b6686b6e399a008
 {
 	int	i;
 	int	result;
