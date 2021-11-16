@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:30:15 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 11:30:17 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/15 12:28:23 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	{
 		f(i, &s[i]);
 		i++;
-	}	
+	}
 }

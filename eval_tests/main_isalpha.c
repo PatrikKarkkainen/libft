@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:36:55 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/08 14:08:08 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:26:23 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,44 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int main ()
+void	test_isalpha()
 {
-	int	var = 'a';
+	int	var;
 	int	correct;
 	int	user;
 
-	correct = isalpha(var);
-	printf("Correct: %d\n", correct);
+	printf("----FT_ISALPHA----\n");
 
+	var = 'a';
+	correct = isalpha(var);
 	user = ft_isalpha(var);
-	printf("User: %d\n", user);
-	return(0);
+	if (correct == user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %d\n", correct);
+		printf("User: %d\n", user);
+	}
+	
+	var = '4';
+	correct = isalpha(var);
+	user = ft_isalpha(var);
+	if (correct == user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %d\n", correct);
+		printf("User: %d\n", user);
+	}
+
+	var = '#';
+	correct = isalpha(var);
+	user = ft_isalpha(var);
+	if (correct == user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %d\n", correct);
+		printf("User: %d\n", user);
+	}
 }
