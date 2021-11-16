@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_splitlen(char const *s, char c)
+static int	ft_splitlen(char const *s, char c)
 {
 	int	i;
 	int	result;
@@ -27,7 +27,7 @@ int	ft_splitlen(char const *s, char c)
 	return (result);
 }
 
-int	ft_strcount(char const *s, char c)
+static int	ft_strcount(char const *s, char c)
 {
 	int	i;
 	int	result;
@@ -47,7 +47,7 @@ int	ft_strcount(char const *s, char c)
 	return (result);
 }
 
-char	*ft_strcopy(char *dest, const char *src, char c)
+static char	*ft_strcopy(char *dest, const char *src, char c)
 {
 	int	i;
 

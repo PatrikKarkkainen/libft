@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_toa(int n, char *str, int i)
+static void	ft_toa(int n, char *str, int i)
 {
 	int	nb;
 
