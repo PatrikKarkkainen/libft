@@ -44,6 +44,10 @@ void	test_strlcat();
 void	test_strlen();
 void	test_strmap();
 void	test_strmapi();
+void	test_strncat();
+void	test_strncmp();
+void	test_strncpy();
+void	test_strnequ();
 
 int		main()
 {
@@ -77,6 +81,10 @@ int		main()
 //	test_strlcat();
 //	test_strlen();
 //	test_strmap();
-	test_strmapi();
+//	test_strmapi();
+//	test_strncat();
+//	test_strncmp();
+//	test_strncpy();
+	test_strnequ();
 	return (0);
 }

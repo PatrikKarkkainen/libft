@@ -13,17 +13,33 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strnequ()
 {
 	char	*str1;
 	char	*str2;
-	int		result;
-	size_t	n;
+	int	user;
 
-	str1 = "ABBBBBA";
-	str2 = "ABBC";
-	n = 0;
-	result = ft_strnequ(str1, str2, n);
-	printf("%d\n", result);
-	return (0);
+	printf("----FT_STREQU----\n");
+
+	str1 = "ABD";
+	str2 = "ABC";
+	user = ft_strnequ(str1, str2, 2);
+	if (user == 1)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 1\n");
+		printf("User: %d\n", user);
+	}
+
+	str1 = "AAA";
+	str2 = "ABB";
+	user = ft_strnequ(str1, str2, 2);
+	if (user == 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 0\n");
+		printf("User: %d\n", user);
+	}
 }

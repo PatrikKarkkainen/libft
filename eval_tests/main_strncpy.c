@@ -15,17 +15,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int main ()
+void	test_strncpy()
 {
-   char src[40];
-   char dest[40];
+	char *src;
+	char correct[50];
+	char user[50];
 
-   memset(dest, '\0', sizeof(dest));
-   strcpy(src, "He");
-   strcpy(dest, "World Hello!");
-   ft_strncpy(dest, src, 2);
+	printf("----FT_STRNCPY----\n");
 
-   printf("Final copied string : %s\n", dest);
-
-   return(0);
+	src = "Hello World!";
+	strncpy(correct, src, 5);
+	ft_strncpy(user, src, 5);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

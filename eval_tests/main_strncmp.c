@@ -14,19 +14,44 @@
 #include <stdio.h>
 #include <string.h>
 
-int main ()
+void	test_strncmp()
 {
-	char str1[15] = "abc";
-	char str2[15] = "abC";
-	int	correct;
+	char	*str1;
+	char	*str2;
 	int	user;
-	int	n;
 
-	n = 3;
-	correct = strncmp(str1, str2, n);
-	printf("Correct: %d\n", correct);
+	printf("----FT_STRNCMP----\n");
 
-	user = ft_strncmp(str1, str2, n);
-	printf("User: %d\n", user);
-	return(0);
+	str1 = "ABC";
+	str2 = "ABC";
+	user = ft_strncmp(str1, str2, 2);
+	if (user == 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 0\n");
+		printf("User: %d\n", user);
+	}
+
+	str1 = "AAA";
+	str2 = "BBB";
+	user = ft_strncmp(str1, str2, 2);
+	if (user < 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: -1\n");
+		printf("User: %d\n", user);
+	}
+
+	str1 = "BBB";
+	str2 = "AAA";
+	user = ft_strncmp(str1, str2, 2);
+	if (user > 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 1\n");
+		printf("User: %d\n", user);
+	}
 }

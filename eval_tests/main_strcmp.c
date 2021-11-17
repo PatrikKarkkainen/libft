@@ -24,7 +24,7 @@ void	test_strcmp()
 
 	str1 = "ABC";
 	str2 = "ABC";
-	user = ft_memcmp(str1, str2, 2);
+	user = ft_strcmp(str1, str2);
 	if (user == 0)
 		printf("OK\n");
 	else
@@ -35,7 +35,7 @@ void	test_strcmp()
 
 	str1 = "AAA";
 	str2 = "BBB";
-	user = ft_memcmp(str1, str2, 2);
+	user = ft_strcmp(str1, str2);
 	if (user < 0)
 		printf("OK\n");
 	else
@@ -46,7 +46,7 @@ void	test_strcmp()
 
 	str1 = "BBB";
 	str2 = "AAA";
-	user = ft_memcmp(str1, str2, 2);
+	user = ft_strcmp(str1, str2);
 	if (user > 0)
 		printf("OK\n");
 	else

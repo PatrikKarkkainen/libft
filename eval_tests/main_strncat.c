@@ -14,17 +14,21 @@
 #include <stdio.h>
 #include <string.h>
 
-int main ()
+void	test_strncat()
 {
-	char src[50], dest[50];
-	char *test;
+	char	src[50] = "World!";
+	char	correct[50] = "Hello ";
+	char	user[50] = "Hello ";
 
-	strcpy(src,  "This is source");
-	strcpy(dest, "This is destination");
+	printf("----FT_STRNCAT----\n");
 
-	test = ft_strncat(dest, src, 5);
-
-	printf("Final destination string : |%s|", dest);
-
-	return(0);
+	strncat(correct, src, 2);
+	ft_strncat(user, src, 2);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }
