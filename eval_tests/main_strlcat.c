@@ -18,13 +18,13 @@
 void	test_strlcat()
 {
 	char	*src;
-	char	correct[50];
+	char	*correct;
 	char	user[50];
 
 	printf("----FT_STRLCAT----\n");
 
 	src = "Hello World!";
-	strlcat(correct, src, 5);
+	correct = "Hello World!";
 	ft_strlcat(user, src, 5);
 	if (*correct == *user)
 		printf("OK\n");

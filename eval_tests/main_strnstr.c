@@ -21,7 +21,9 @@ void	test_strnstr()
 	char *correct;
 	char *user;
 
-	correct = strnstr(haystack, needle, 15);
+	printf("----FT_STRNSTR----\n");
+
+	correct = "There World!";
 	user = ft_strnstr(haystack, needle, 15);
 	if (*correct == *user)
 		printf("OK\n");

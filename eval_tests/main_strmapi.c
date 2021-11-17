@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-char	ft_toup(unsigned int i,char c)
+char	ft_toupperchari(unsigned int i,char c)
 {
 	if ((c >= 'a' && c <= 'z') && (i % 2 == 0))
 		c = c - 32;
@@ -30,7 +30,7 @@ void	test_strmapi()
 
 	str = "hello!";
 	correct = "HeLlO!";
-	result = ft_strmapi(str, &ft_toup);
+	result = ft_strmapi(str, &ft_toupperchari);
 	if (*correct == *result)
 		printf("OK\n");
 	else

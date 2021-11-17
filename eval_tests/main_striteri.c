@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-void	ft_toup(unsigned int n, char *c)
+void	ft_oneplusi(unsigned int n, char *c)
 {
 	if (n % 2 == 0)
 		*c = *c + 1;
@@ -29,7 +29,7 @@ void	test_striteri()
 	str = (char *)malloc(sizeof(char) * 7);
 	strcpy(str, "hello");
 	correct = "iemlp";
-	ft_striteri(str, &ft_toup);
+	ft_striteri(str, &ft_oneplusi);
 	if (*correct == *str)
 		printf("OK\n");
 	else

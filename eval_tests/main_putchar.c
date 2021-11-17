@@ -15,5 +15,5 @@
 
 void	test_putchar()
 {
-	printf("----FT_PUTCHAR----\n);
+	printf("----FT_PUTCHAR----\n");
 }

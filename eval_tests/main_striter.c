@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-void	ft_toup(char *c)
+void	ft_oneplus(char *c)
 {
 	*c = *c + 1;
 }
@@ -28,7 +28,7 @@ void	test_striter()
 	str = (char *)malloc(sizeof(char) * 7);
 	strcpy(str, "hello");
 	correct = "ifmmp";
-	ft_striter(str, &ft_toup);
+	ft_striter(str, &ft_oneplus);
 	if (*correct == *str)
 		printf("OK\n");
 	else

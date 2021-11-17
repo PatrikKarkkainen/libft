@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-char	ft_toup(char c)
+char	ft_toupperchar(char c)
 {
 	if (c >= 'a' && c <= 'z')
 		c = c - 32;
@@ -30,7 +30,7 @@ void	test_strmap()
 
 	str = "hello!";
 	correct = "HELLO!";
-	result = ft_strmap(str, &ft_toup);
+	result = ft_strmap(str, &ft_toupperchar);
 	if (*correct == *result)
 		printf("OK\n");
 	else
