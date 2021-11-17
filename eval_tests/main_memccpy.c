@@ -14,23 +14,33 @@
 #include <stdio.h>
 #include <string.h>
 
-int main ()
+void	test_memccpy()
 {
-	const char src[50] = "World Hello!0";
-	char dest[50];
-	char *test;
+	char *src;
+	char correct[50];
+	char user[50];
 
-	strcpy(dest,"Helooo");
-	printf("Before memccpy dest = %s\n", dest);
-	test = memccpy(dest, src, 48, 20);
-	printf("After memccpy dest = %s\n", dest);
-	printf("%s\n", test);
+	printf("----FT_MEMCCPY----\n");
 
-	strcpy(dest,"Helooo");
-	printf("Before memccpy dest = %s\n", dest);
-	test = ft_memccpy(dest, src, 48, 20);
-	printf("After memccpy dest = %s\n", dest);
-	printf("%s\n", test);
+	src = "Hello World!";
+	memccpy(correct, src, 87, 13);
+	ft_memccpy(user, src, 87, 13);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 
-	return(0);
+	src = "Hello\0World!";
+	memccpy(correct, src, 0, 13);
+	ft_memccpy(user, src, 0, 13);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

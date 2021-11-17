@@ -14,15 +14,42 @@
 #include <stdio.h>
 #include <string.h>
 
-int	main()
+void	test_memcmp()
 {
-	char *str1;
-	char *str2;
-	int ret;
+	char	*str1;
+	char	*str2;
+	int	user;
 
-	str1 = "t\200";
+	str1 = "ABC";
+	str2 = "ABC";
+	user = ft_memcmp(str1, str2, 2);
+	if (user == 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 0\n");
+		printf("User: %d\n", user);
+	}
+
+	str1 = "t\10";
 	str2 = "t\0";
-	ret = ft_memcmp(str1, str2, 2);
-	printf("%d\n", ret);
-	return(0);
+	user = ft_memcmp(str1, str2, 2);
+	if (user > 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 1\n");
+		printf("User: %d\n", user);
+	}
+
+	str1 = "AAA";
+	str2 = "BBB";
+	user = ft_memcmp(str1, str2, 2);
+	if (user < 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: -1\n");
+		printf("User: %d\n", user);
+	}
 }

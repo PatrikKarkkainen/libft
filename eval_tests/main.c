@@ -22,6 +22,9 @@ void	test_isdigit();
 void	test_isprint();
 void	test_itoa();
 void	test_memalloc();
+void	test_memccpy();
+void	test_memchr();
+void	test_memcmp();
 
 int		main()
 {
@@ -33,6 +36,9 @@ int		main()
 //	test_isdigit();
 //	test_isprint();
 //	test_itoa();
-	test_memalloc();
+//	test_memalloc();
+//	test_memccpy();
+//	test_memchr();
+	test_memcmp();
 	return (0);
 }

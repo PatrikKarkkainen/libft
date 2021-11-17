@@ -13,10 +13,12 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	test_memalloc()
+void	test_memalloc()
 {
 	int	size;
 	char	*str;
+
+	printf("----FT_MEMALLOC----\n");
 
 	size = 10;
 	str = (char *)ft_memalloc(size);
@@ -24,5 +26,4 @@ int	test_memalloc()
 		printf("OK\n");
 	else
 		printf("KO\n");
-	return (0);
 }

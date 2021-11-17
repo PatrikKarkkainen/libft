@@ -14,13 +14,36 @@
 #include <stdio.h>
 #include <string.h>
 
-int main ()
+void	test_memchr()
 {
-	const char str[] = "Hello World!";
-	const char ch = 'o';
-	char *ret;
+	char *str;
+	char ch;
+	char *correct;
+	char *user;
 
-	ret = ft_memchr(str, ch, 2);
-	printf("String after |%c| is - |%s|\n", ch, ret);
-	return(0);
+	printf("----FT_MEMCHR----\n");
+
+	str = "Hello World!";
+	ch = 'o';
+	correct = memchr(str, ch, 6);
+	user = ft_memchr(str, ch, 6);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
+
+	str = "Hello World!";
+	ch = 'p';
+	correct = memchr(str, ch, 3);
+	user = ft_memchr(str, ch, 3);
+	if (user == NULL)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

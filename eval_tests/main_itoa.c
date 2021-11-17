@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	test_itoa()
+void	test_itoa()
 {
 	int	i;
 	char	*correct;
@@ -42,5 +42,4 @@ int	test_itoa()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", user);
 	}
-	return (0);
 }
