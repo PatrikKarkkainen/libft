@@ -20,6 +20,8 @@ void	test_memcmp()
 	char	*str2;
 	int	user;
 
+	printf("----FT_MEMCMP----\n");
+
 	str1 = "ABC";
 	str2 = "ABC";
 	user = ft_memcmp(str1, str2, 2);

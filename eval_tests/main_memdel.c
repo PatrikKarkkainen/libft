@@ -13,19 +13,18 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_memdel()
 {
 	void	*ptr;
 
 	ptr = (void *)malloc(sizeof(int));
 	*(int *)ptr = 42;
 
-	printf("%d\n", *(int *)ptr);
+	printf("----FT_MEMDEL----\n");
+
 	ft_memdel(&ptr);
-	//free(ptr);
 	if (ptr == NULL)
-		printf("This is null.");
+		printf("OK\n");
 	else
-		printf("This is NOT null");
-	return (0);
+		printf("KO\n");
 }

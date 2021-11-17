@@ -14,17 +14,20 @@
 #include <string.h>
 #include "libft.h"
 
-int main ()
+void	test_memset()
 {
-	char str[50];
-	char *test;
+	char	correct[50] = "Hello World!";
+	char	user[50] = "Hello World!";
 
-	strcpy(str,"This is string.h library function");
-	puts(str);
+	printf("----FT_MEMSET----\n");
 
-	test = ft_memset(str,'$',0);
-	puts(str);
-	puts(test);
-
-	return(0);
+	memset(correct, '$', 2);
+	ft_memset(user, '$', 2);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

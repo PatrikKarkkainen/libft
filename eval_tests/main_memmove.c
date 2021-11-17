@@ -14,15 +14,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int main ()
+void	test_memmove()
 {
-	char dest[] = "oldstring";
-	const char src[]  = "new";
-	char *test;
+	char	*src;
+	char	correct[50] = "Hello World!";
+	char	user[50] = "Hello World!";
 
-	printf("Before memmove dest = %s, src = %s\n", dest, src);
-	test = ft_memmove(dest, src, 2);
-	printf("After memmove dest = %s, src = %s\n", dest, src);
-	printf("%s\n", test);
-	return(0);
+	printf("----FT_MEMMOVE----\n");
+
+	src = "new";
+	memmove(correct, src, 4);
+	ft_memmove(user, src, 4);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

@@ -25,6 +25,10 @@ void	test_memalloc();
 void	test_memccpy();
 void	test_memchr();
 void	test_memcmp();
+void	test_memcpy();
+void	test_memdel();
+void	test_memmove();
+void	test_memset();
 
 int		main()
 {
@@ -39,6 +43,10 @@ int		main()
 //	test_memalloc();
 //	test_memccpy();
 //	test_memchr();
-	test_memcmp();
+//	test_memcmp();
+//	test_memcpy();
+//	test_memdel();
+//	test_memmove();
+	test_memset();
 	return (0);
 }
