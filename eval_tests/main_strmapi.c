@@ -20,15 +20,22 @@ char	ft_toup(unsigned int i,char c)
 	return (c);
 }
 
-int	main()
+void	test_strmapi()
 {
 	char	*str;
+	char	*correct;
 	char	*result;
-	char	n;
+
+	printf("----FT_STRMAPI----\n");
 
 	str = "hello!";
-	n = '\n';
+	correct = "HeLlO!";
 	result = ft_strmapi(str, &ft_toup);
-	printf("%s\n", result);
-	return (0);
+	if (*correct == *result)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", result);
+	}
 }

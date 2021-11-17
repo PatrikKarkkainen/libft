@@ -38,6 +38,12 @@ void	test_strdel();
 void	test_strdup();
 void	test_strequ();
 void	test_striter();
+void	test_striteri();
+void	test_strjoin();
+void	test_strlcat();
+void	test_strlen();
+void	test_strmap();
+void	test_strmapi();
 
 int		main()
 {
@@ -65,6 +71,12 @@ int		main()
 //	test_strdel();
 //	test_strdup();
 //	test_strequ();
-	test_striter();
+//	test_striter();
+//	test_striteri();
+//	test_strjoin();
+//	test_strlcat();
+//	test_strlen();
+//	test_strmap();
+	test_strmapi();
 	return (0);
 }

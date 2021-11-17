@@ -20,15 +20,22 @@ char	ft_toup(char c)
 	return (c);
 }
 
-int	main()
+void	test_strmap()
 {
 	char	*str;
+	char	*correct;
 	char	*result;
-	char	n;
+
+	printf("----FT_STRMAP----\n");
 
 	str = "hello!";
-	n = '\n';
+	correct = "HELLO!";
 	result = ft_strmap(str, &ft_toup);
-	printf("%s\n", result);
-	return (0);
+	if (*correct == *result)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", result);
+	}
 }

@@ -13,11 +13,30 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strlen()
 {
 	int	result;
-	char *str = "";
+	char	*str;
 
+	printf("----FT_STRLEN----\n");
+
+	str = "123";
 	result = ft_strlen(str);
-	printf("%d\n", result);
+	if (result == 3)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 3\n");
+		printf("User: %d\n", result);
+	}
+
+	str = "";
+	result = ft_strlen(str);
+	if (result == 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 0\n");
+		printf("User: %d\n", result);
+	}
 }

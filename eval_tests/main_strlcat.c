@@ -13,24 +13,24 @@
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
+#include <bsd/string.h>
 
-int main()
+void	test_strlcat()
 {
-    char first[] = "This is ";
-    char last[] = "a potentially long string";
-    int r;
-    int size = 2;
-    char buffer[size];
+	char	*src;
+	char	correct[50];
+	char	user[50];
 
-    strcpy(buffer,first);
-    r = ft_strlcat(buffer,last,size);
+	printf("----FT_STRLCAT----\n");
 
-    puts(buffer);
-    printf("Value returned: %d\n",r);
-    if( r > size )
-        puts("String truncated");
-    else
-        puts("String was fully copied");
-
-    return(0);
+	src = "Hello World!";
+	strlcat(correct, src, 5);
+	ft_strlcat(user, src, 5);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

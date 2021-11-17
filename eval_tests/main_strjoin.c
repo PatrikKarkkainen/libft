@@ -13,15 +13,24 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strjoin()
 {
 	char	*str1;
 	char	*str2;
+	char	*correct;
 	char	*result;
+
+	printf("----FT_STRJOIN----\n");
 
 	str1 = "Hello ";
 	str2 = "World!";
+	correct = "Hello World!";
 	result = ft_strjoin(str1, str2);
-	printf("%s\n", result);
-	return (0);
+	if (*correct == *result)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", result);
+	}
 }
