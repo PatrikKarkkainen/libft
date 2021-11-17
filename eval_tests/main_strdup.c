@@ -13,11 +13,33 @@
 #include "libft.h"
 #include <stdio.h>
 
-int main()
+void	test_strdup()
 {
-   char *str = "";
-   char *result;
-   result = ft_strdup(str);
-   printf("The string : %s", result);
-   return (0);
+	char	*str;
+	char	*correct;
+	char	*user;
+
+	printf("----FT_STRDUP----\n");
+
+	str = "Hello World!";
+	correct = strdup(str);
+	user = ft_strdup(str);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
+
+	str = "";
+	correct = strdup(str);
+	user = ft_strdup(str);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

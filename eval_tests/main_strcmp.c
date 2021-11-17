@@ -14,17 +14,44 @@
 #include <stdio.h>
 #include <string.h>
 
-int main ()
+void	test_strcmp()
 {
-	char str1[15] = "Nbcdef";
-	char str2[15] = "NABCDEF";
-	int	correct;
+	char	*str1;
+	char	*str2;
 	int	user;
 
-	correct = strcmp(str1, str2);
-	printf("Correct: %d\n", correct);
+	printf("----FT_STRCMP----\n");
 
-	user = ft_strcmp(str1, str2);
-	printf("User: %d\n", user);
-	return(0);
+	str1 = "ABC";
+	str2 = "ABC";
+	user = ft_memcmp(str1, str2, 2);
+	if (user == 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 0\n");
+		printf("User: %d\n", user);
+	}
+
+	str1 = "AAA";
+	str2 = "BBB";
+	user = ft_memcmp(str1, str2, 2);
+	if (user < 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: -1\n");
+		printf("User: %d\n", user);
+	}
+
+	str1 = "BBB";
+	str2 = "AAA";
+	user = ft_memcmp(str1, str2, 2);
+	if (user > 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 1\n");
+		printf("User: %d\n", user);
+	}
 }

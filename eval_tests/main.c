@@ -32,6 +32,12 @@ void	test_memset();
 void	test_strcat();
 void	test_strchr();
 void	test_strclr();
+void	test_strcmp();
+void	test_strcpy();
+void	test_strdel();
+void	test_strdup();
+void	test_strequ();
+void	test_striter();
 
 int		main()
 {
@@ -53,6 +59,12 @@ int		main()
 //	test_memset();
 //	test_strcat();
 //	test_strchr();
-	test_strclr();
+//	test_strclr();
+//	test_strcmp();
+//	test_strcpy();
+//	test_strdel();
+//	test_strdup();
+//	test_strequ();
+	test_striter();
 	return (0);
 }

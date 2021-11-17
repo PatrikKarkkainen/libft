@@ -13,15 +13,33 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strequ()
 {
 	char	*str1;
 	char	*str2;
-	int		result;
+	int	user;
 
-	str1 = "AA";
-	str2 = "AA";
-	result = ft_strequ(str1, str2);
-	printf("%d\n", result);
-	return (0);
+	printf("----FT_STREQU----\n");
+
+	str1 = "ABC";
+	str2 = "ABC";
+	user = ft_strequ(str1, str2);
+	if (user == 1)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 1\n");
+		printf("User: %d\n", user);
+	}
+
+	str1 = "AAA";
+	str2 = "BBB";
+	user = ft_strequ(str1, str2);
+	if (user == 0)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: 0\n");
+		printf("User: %d\n", user);
+	}
 }

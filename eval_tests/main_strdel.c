@@ -13,21 +13,18 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strdel()
 {
-	char	*ptr = NULL;
+	void	*ptr;
 
-	ptr = (char *)malloc(3);
-	ptr[0] = '4';
-	ptr[1] = '2';
-	ptr[2] = '\0';
+	ptr = (void *)malloc(sizeof(int));
+	*(int *)ptr = 42;
 
-	printf("%s\n", ptr);
-	ft_strdel(&ptr);
-	//free(ptr);
+	printf("----FT_STRDEL----\n");
+
+	ft_memdel(&ptr);
 	if (ptr == NULL)
-		printf("Pointer is null.");
+		printf("OK\n");
 	else
-		printf("Pointer is NOT null.");
-	return (0);
+		printf("KO\n");
 }

@@ -14,16 +14,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int main () {
-   char src[20];
-   char dest[5];
-   char *test;
-  
-   memset(dest, '\0', sizeof(dest));
-   strcpy(src, "Hello World!");
-   test = ft_strcpy(dest, src);
+void	test_strcpy()
+{
+	char *src;
+	char correct[50];
+	char user[50];
 
-   printf("Final copied string : %s\n", test);
-   
-   return(0);
+	printf("----FT_STRCPY----\n");
+
+	src = "Hello World!";
+	strcpy(correct, src);
+	ft_strcpy(user, src);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }
