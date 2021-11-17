@@ -29,6 +29,9 @@ void	test_memcpy();
 void	test_memdel();
 void	test_memmove();
 void	test_memset();
+void	test_strcat();
+void	test_strchr();
+void	test_strclr();
 
 int		main()
 {
@@ -47,6 +50,9 @@ int		main()
 //	test_memcpy();
 //	test_memdel();
 //	test_memmove();
-	test_memset();
+//	test_memset();
+//	test_strcat();
+//	test_strchr();
+	test_strclr();
 	return (0);
 }

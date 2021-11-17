@@ -13,12 +13,17 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strclr()
 {
 	char	str[] = "Hello World!";
+	char	*correct;
 
-	printf("%s\n", str);
+	printf("----FT_STRCLR----\n");
+
+	correct = "";
 	ft_strclr(str);
-	printf("%s\n", str);
-	return (0);
+	if (*correct == *str)
+		printf("OK\n");
+	else
+		printf("KO\n");
 }
