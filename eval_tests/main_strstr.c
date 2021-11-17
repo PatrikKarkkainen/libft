@@ -14,18 +14,22 @@
 #include <stdio.h>
 #include <string.h>
 
-
-int main ()
+void	test_strstr()
 {
 	const char haystack[20] = "Hello There World!";
 	const char needle[20] = "There";
-	char *answer;
+	char *correct;
 	char *user;
 
-	answer = strstr(haystack, needle);
-	printf("Correct: %s\n", answer);
+	printf("----FT_STRSTR----\n");
 
+	correct = strstr(haystack, needle);
 	user = ft_strstr(haystack, needle);
-	printf("User: %s\n", user);
-	return(0);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

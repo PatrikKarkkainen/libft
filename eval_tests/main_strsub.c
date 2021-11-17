@@ -13,17 +13,39 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strsub()
 {
 	char	*str;
 	char	*result;
-	int		start;
+	char	*correct;
+	int	start;
 	size_t	len;
 
+	printf("----FT_STRSUB----\n");
+
 	str = "Hello!";
-	start = 3;
-	len = 5;
+	correct = "el";
+	start = 1;
+	len = 2;
 	result = ft_strsub(str, start, len);
-	printf("%s\n", result);
-	return (0);
+	if (*correct == *result)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", result);
+	}
+	
+	str = "Hello!";
+	correct = "l";
+	start = 3;
+	len = 1;
+	result = ft_strsub(str, start, len);
+	if (*correct == *result)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", result);
+	}
 }

@@ -13,13 +13,22 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strtrim()
 {
 	char	*str;
 	char	*result;
+	char	*correct;
+
+	printf("----FT_STRTRIM----\n");
 
 	str = "  Hello World  d";
+	correct = "Hello Worldd";
 	result = ft_strtrim(str);
-	printf("%s\n", result);
-	return (0);
+	if (*correct == *result)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", result);
+	}
 }

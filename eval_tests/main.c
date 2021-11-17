@@ -52,6 +52,11 @@ void	test_strnew();
 void	test_strnstr();
 void	test_strrchr();
 void	test_strsplit();
+void	test_strstr();
+void	test_strsub();
+void	test_strtrim();
+void	test_tolower();
+void	test_toupper();
 
 int		main()
 {
@@ -93,6 +98,11 @@ int		main()
 //	test_strnew();
 //	test_strnstr();
 //	test_strrchr();
-	test_strsplit();
+//	test_strsplit();
+//	test_strstr();
+//	test_strsub();
+//	test_strtrim();
+//	test_tolower();
+	test_toupper();
 	return (0);
 }

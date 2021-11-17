@@ -14,17 +14,33 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int main ()
+void	test_toupper()
 {
 	char 	c;
 	int 	correct;
 	int 	user;
 
-	c = 'Z';
-	correct = toupper(c);
-	printf("Correct: %d\n", correct);
+	printf("----FT_TOUPPER----\n");
 
+	c = 'f';
+	correct = toupper(c);
 	user = ft_toupper(c);
-	printf("User: %d\n", user);
-	return(0);
+	if (correct == user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %d\n", correct);
+		printf("User: %d\n", user);
+	}
+
+	c = '3';
+	correct = toupper(c);
+	user = ft_toupper(c);
+	if (correct == user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %d\n", correct);
+		printf("User: %d\n", user);
+	}
 }
