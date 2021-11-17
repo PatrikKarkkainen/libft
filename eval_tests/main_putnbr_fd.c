@@ -11,14 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	main()
+void	test_putnbr_fd()
 {
-	int	nb;
-	int	fd;
-
-	nb = 42;
-	fd = 2;
-	ft_putnbr_fd(nb, fd);
-	return (0);
+	printf("----FT_PUTNBR_FD----\n");
 }

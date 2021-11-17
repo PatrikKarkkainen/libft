@@ -11,14 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	main()
+void	test_putendl_fd()
 {
-	char	*str;
-	int	fd;
-
-	str = "Hello World!";
-	fd = 2;
-	ft_putendl_fd(str, fd);
-	return (0);
+	printf("----FT_PUTENDL_FD----\n");
 }

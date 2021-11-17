@@ -12,13 +12,8 @@
 
 #include "libft.h"
 #include <stdio.h>
-#include <string.h>
 
-int	main()
+void	test_putstr()
 {
-	char *str;
-
-	str = "Hello World!";
-	ft_putstr(str);
-	return (0);
+	printf("----FT_PUTSTR----\n");
 }

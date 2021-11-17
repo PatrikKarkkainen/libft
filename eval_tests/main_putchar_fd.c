@@ -11,14 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	main()
+void	test_putchar_fd()
 {
-	char	a;
-	int	fd;
-
-	a = 'a';
-	fd = 2;
-	ft_putchar_fd(a, fd);
-	return (0);
+	printf("----FT_PUTCHAR_FD----\n");
 }

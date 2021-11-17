@@ -14,12 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int	main()
+void	test_putnbr()
 {
-	int	i;
-
-	i = 2147483647;
-	ft_putnbr(i);
-	ft_putchar('\n');
-	return (0);
+	printf("----FT_PUTNBR----\n");
 }
