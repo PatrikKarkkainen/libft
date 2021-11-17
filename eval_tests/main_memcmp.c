@@ -16,24 +16,13 @@
 
 int	main()
 {
-	char str1[15];
-	char str2[15];
+	char *str1;
+	char *str2;
 	int ret;
 
-	memcpy(str1, "ABCDEF", 6);
-	memcpy(str2, "ABCDEN", 6);
-	ret = ft_memcmp(str1, str2, 6);
-	if(ret > 0)
-	{
-		printf("str2 is less than str1");
-	}
-	else if(ret < 0)
-	{
-		printf("str1 is less than str2");
-	}
-	else
-	{
-		printf("str1 is equal to str2");
-	}
+	str1 = "t\200";
+	str2 = "t\0";
+	ret = ft_memcmp(str1, str2, 2);
+	printf("%d\n", ret);
 	return(0);
 }

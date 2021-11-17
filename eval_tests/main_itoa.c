@@ -13,13 +13,34 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+int	test_itoa()
 {
 	int	i;
-	char	*str;
+	char	*correct;
+	char	*user;
+
+	printf("----FT_ITOA----\n");
+
+	i = 12;
+	correct = "12";
+	user = ft_itoa(i);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 
 	i = -42;
-	str = ft_itoa(i);
-	printf("%s\n", str);
+	correct = "-42";
+	user = ft_itoa(i);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 	return (0);
 }

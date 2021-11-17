@@ -20,6 +20,8 @@ void	test_isalpha();
 void	test_isascii();
 void	test_isdigit();
 void	test_isprint();
+void	test_itoa();
+void	test_memalloc();
 
 int		main()
 {
@@ -29,26 +31,8 @@ int		main()
 //	test_isalpha();
 //	test_isascii();
 //	test_isdigit();
-	test_isprint();
+//	test_isprint();
+//	test_itoa();
+	test_memalloc();
 	return (0);
-}
-
-void	test_bzero()
-{
-	char *correct;
-	char *user;
-
-	printf("----FT_BZERO----\n");
-
-	correct = "Hello World!";
-	user = "Hello World!";
-	bzero(correct, 2);
-	ft_bzero(user, 1);
-	if (correct == user)
-		printf("OK\n");
-	else
-	{
-		printf("Correct: %s\n", correct);
-		printf("User: %s\n", user);
-	}
 }

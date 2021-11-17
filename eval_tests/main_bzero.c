@@ -15,12 +15,29 @@
 #include <string.h>
 #include <strings.h>
 
-int	main()
+int	test_bzero()
 {
-	char str[50] = "This is a string";
+	void	*correct;
+	void	*user;
 
-	puts(str);
-	ft_bzero(&str[5], 1);
-	puts(str);
+	printf("----FT_BZERO----\n");
+
+	correct = (void *)malloc(sizeof(*correct) * 5);
+	if (correct == NULL)
+		return (0);
+	user = (void *)malloc(sizeof(*user) * 5);
+	if (user == NULL)
+		return (0);
+	memset(correct, 'a', 3);
+	memset(user, 'a', 3);
+	bzero(correct, 3);
+	ft_bzero(user, 3);
+	if (*(char *)correct == *(char *)user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", (char *)correct);
+		printf("User: %s\n", (char *)user);
+	}
 	return (0);
 }

@@ -13,13 +13,16 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+int	test_memalloc()
 {
 	int	size;
-	void	*ptr;
+	char	*str;
 
 	size = 10;
-	ptr = ft_memalloc(size);
-	printf("%lu\n", sizeof(ptr));
+	str = (char *)ft_memalloc(size);
+	if (str)
+		printf("OK\n");
+	else
+		printf("KO\n");
 	return (0);
 }
