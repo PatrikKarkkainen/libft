@@ -14,20 +14,20 @@
 #include <stdio.h>
 #include <string.h>
 
-
-int main ()
+void	test_strnstr()
 {
 	const char haystack[20] = "Hello There World!";
 	const char needle[20] = "There";
-	char *answer;
+	char *correct;
 	char *user;
-	int	n;
 
-	n = 11;
-	answer = strnstr(haystack, needle, n);
-	printf("Correct: %s\n", answer);
-
-	user = ft_strnstr(haystack, needle, n);
-	printf("User: %s\n", user);
-	return(0);
+	correct = strnstr(haystack, needle, 15);
+	user = ft_strnstr(haystack, needle, 15);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

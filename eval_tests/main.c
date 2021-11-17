@@ -48,6 +48,10 @@ void	test_strncat();
 void	test_strncmp();
 void	test_strncpy();
 void	test_strnequ();
+void	test_strnew();
+void	test_strnstr();
+void	test_strrchr();
+void	test_strsplit();
 
 int		main()
 {
@@ -85,6 +89,10 @@ int		main()
 //	test_strncat();
 //	test_strncmp();
 //	test_strncpy();
-	test_strnequ();
+//	test_strnequ();
+//	test_strnew();
+//	test_strnstr();
+//	test_strrchr();
+	test_strsplit();
 	return (0);
 }

@@ -13,16 +13,22 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strnew()
 {
 	size_t	size;
 	char	*str;
+	char	*correct;
 
-	size = 0;
+	printf("----FT_STRNEW----\n");
+
+	size = 3;
+	correct = "42";
 	str = ft_strnew(size);
 	str[0] = '4';
 	str[1] = '2';
 	str[2] = '\0';
-	printf("%s\n", str);
-	return (0);
+	if (*correct == *str)
+		printf("OK\n");
+	else
+		printf("KO\n");
 }

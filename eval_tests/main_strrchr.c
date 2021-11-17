@@ -14,13 +14,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int main ()
+void	test_strrchr()
 {
-	const char str[] = "Hello World!";
-	const char ch = 'H';
-	char *ret;
+	char	str[] = "Hello World!";
+	char	ch = 'o';
+	char	*correct;
+	char	*user;
 
-	ret = ft_strrchr(str, ch);
-	printf("String after |%c| is - |%s|\n", ch, ret);
-	return(0);
+	printf("----FT_STRRCHR----\n");
+
+	correct = strrchr(str, ch);
+	user = ft_strrchr(str, ch);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
 }

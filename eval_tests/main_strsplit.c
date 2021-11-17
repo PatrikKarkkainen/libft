@@ -13,19 +13,31 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	main()
+void	test_strsplit()
 {
+	int	i;
 	char	c;
 	char	*str;
 	char	**arr;
+	char	*correct[2];
 
+	printf("----FT_STRSPLIT----\n");
+
+	i = 0;
 	c = '*';
 	str = "Hello*World!";
+	correct[0] = "Hello";
+	correct[1] = "World!";
 	arr = ft_strsplit(str, c);
-	while (*arr)
+	while (arr[i])
 	{
-		printf("%s\n", *arr);
-		arr++;
+		if (*arr[i] != *correct[i])
+		{
+			printf("Correct: %s\n", correct[i]);
+			printf("User: %s\n", *arr);
+			return;
+		}
+		i++;
 	}
-	return (0);
+	printf("OK\n");
 }
