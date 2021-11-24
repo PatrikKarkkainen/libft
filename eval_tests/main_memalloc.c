@@ -26,4 +26,5 @@ void	test_memalloc()
 		printf("OK\n");
 	else
 		printf("KO\n");
+	free(str);
 }

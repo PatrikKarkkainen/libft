@@ -15,7 +15,7 @@
 #include <string.h>
 #include <strings.h>
 
-int	test_bzero()
+void	test_bzero()
 {
 	void	*correct;
 	void	*user;
@@ -24,10 +24,10 @@ int	test_bzero()
 
 	correct = (void *)malloc(sizeof(*correct) * 5);
 	if (correct == NULL)
-		return (0);
+		return ;
 	user = (void *)malloc(sizeof(*user) * 5);
 	if (user == NULL)
-		return (0);
+		return ;
 	memset(correct, 'a', 3);
 	memset(user, 'a', 3);
 	bzero(correct, 3);
@@ -39,5 +39,6 @@ int	test_bzero()
 		printf("Correct: %s\n", (char *)correct);
 		printf("User: %s\n", (char *)user);
 	}
-	return (0);
+	free(correct);
+	free(user);
 }

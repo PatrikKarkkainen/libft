@@ -17,13 +17,13 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*str;
 	int		i;
 
-	str = (char *)malloc((sizeof(char) * len) + 1);
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (0);
-	i = start;
-	while ((size_t)i < (len + start) && s[i] != '\0')
+	i = 0;
+	while (len--)
 	{
-		str[i - start] = s[i];
+		str[i] = s[start + i];
 		i++;
 	}
 	str[i] = '\0';

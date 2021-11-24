@@ -36,4 +36,5 @@ void	test_striter()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", str);
 	}
+	free(str);
 }

@@ -25,6 +25,7 @@ void	test_strlcat()
 
 	src = "Hello World!";
 	correct = "Hello World!";
+	user[0] = '\0';
 	ft_strlcat(user, src, 5);
 	if (*correct == *user)
 		printf("OK\n");

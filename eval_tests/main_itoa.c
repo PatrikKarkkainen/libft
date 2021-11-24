@@ -31,6 +31,7 @@ void	test_itoa()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", user);
 	}
+	free(user);
 
 	i = -42;
 	correct = "-42";
@@ -42,4 +43,17 @@ void	test_itoa()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", user);
 	}
+	free(user);
+
+	i = 0;
+	correct = "0";
+	user = ft_itoa(i);
+	if (*correct == *user)
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %s\n", correct);
+		printf("User: %s\n", user);
+	}
+	free(user);
 }

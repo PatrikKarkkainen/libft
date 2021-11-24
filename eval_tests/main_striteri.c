@@ -37,5 +37,6 @@ void	test_striteri()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", str);
 	}
+	free(str);
 }
 

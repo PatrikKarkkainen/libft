@@ -31,6 +31,8 @@ void	test_strdup()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", user);
 	}
+	free(correct);
+	free(user);
 
 	str = "";
 	correct = strdup(str);
@@ -42,4 +44,6 @@ void	test_strdup()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", user);
 	}
+	free(correct);
+	free(user);
 }

@@ -15,19 +15,13 @@
 
 void	test_strsub()
 {
-	char	*str;
 	char	*result;
 	char	*correct;
-	int	start;
-	size_t	len;
 
 	printf("----FT_STRSUB----\n");
 
-	str = "Hello!";
 	correct = "el";
-	start = 1;
-	len = 2;
-	result = ft_strsub(str, start, len);
+	result = ft_strsub("Hello", 1, 2);
 	if (*correct == *result)
 		printf("OK\n");
 	else
@@ -35,12 +29,11 @@ void	test_strsub()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", result);
 	}
-	
-	str = "Hello!";
+	free(result);
+	result = NULL;
+
 	correct = "l";
-	start = 3;
-	len = 1;
-	result = ft_strsub(str, start, len);
+	result = ft_strsub("Hello", 3, 1);
 	if (*correct == *result)
 		printf("OK\n");
 	else
@@ -48,4 +41,6 @@ void	test_strsub()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", result);
 	}
+	free(result);
+	result = NULL;
 }

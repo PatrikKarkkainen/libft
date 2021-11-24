@@ -31,4 +31,5 @@ void	test_strnew()
 		printf("OK\n");
 	else
 		printf("KO\n");
+	free(str);
 }

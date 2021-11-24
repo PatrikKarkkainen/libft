@@ -38,4 +38,5 @@ void	test_strmapi()
 		printf("Correct: %s\n", correct);
 		printf("User: %s\n", result);
 	}
+	free(result);
 }
