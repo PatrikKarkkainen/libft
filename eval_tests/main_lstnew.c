@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 13:26:44 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/26 14:01:17 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:42:52 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,14 @@ void test_lstnew()
 		printf("Correct: %s\n", str);
 		printf("User: %s\n", (char *)list->content);
 	}
+	if (list->content_size == (size_t)sizeof(str))
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %zd\n", (size_t)sizeof(str)),
+		printf("User: %zd\n", list->content_size);
+	}
+	free (list->content);
 	free (list);
 
 	list = ft_lstnew(&i, (sizeof(i)));
@@ -43,5 +51,18 @@ void test_lstnew()
 		printf("Correct: %d\n", i);
 		printf("User: %d\n", *(int *)list->content);
 	}
+
+	if (list->next == NULL)
+		printf("OK\n");
+	else
+		printf("Next is not set to null!\n");
+	if (list->content_size == (size_t)sizeof(i))
+		printf("OK\n");
+	else
+	{
+		printf("Correct: %zd\n", (size_t)sizeof(i)),
+		printf("User: %zd\n", list->content_size);
+	}
+	free (list->content);
 	free (list);
 }
