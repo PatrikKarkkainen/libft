@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:41:36 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/15 13:38:35 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:32:42 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	test_strsub();
 void	test_strtrim();
 void	test_tolower();
 void	test_toupper();
+void	test_lstnew();
 
 int		main()
 {
@@ -104,5 +105,6 @@ int		main()
 	test_strtrim();
 	test_tolower();
 	test_toupper();
+	test_lstnew();
 	return (0);
 }
