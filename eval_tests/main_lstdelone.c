@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 14:40:59 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/26 15:36:21 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/11/29 14:00:08 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void	del(void *content, size_t size)
+void	del_one(void *content, size_t size)
 {
 	(void)size;
 	free(content);
@@ -39,7 +39,7 @@ void	test_lstdelone()
 	list3 = ft_lstnew(str3, sizeof(str3));
 	list->next = list2;
 	list2->next = list3;
-	ft_lstdelone(&list2, &del);
+	ft_lstdelone(&list2, &del_one);
 	if (*(char *)list->content == *str)
 		printf("OK\n");
 	else
