@@ -9,6 +9,7 @@ SRCS += ft_itoa.c
 SRCS += ft_lstadd.c
 SRCS += ft_lstdel.c
 SRCS += ft_lstdelone.c
+SRCS += ft_lstiter.c
 SRCS += ft_lstnew.c
 SRCS += ft_memalloc.c
 SRCS += ft_memccpy.c
