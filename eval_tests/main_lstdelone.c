@@ -6,7 +6,7 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 14:40:59 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/29 14:00:08 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/12/02 17:22:55 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void	del_one(void *content, size_t size)
+void		del_one(void *content, size_t size)
 {
 	(void)size;
 	free(content);
 }
 
-void	test_lstdelone()
+static t_list	*test_lstnew(void const *content, size_t content_size)
+{
+	t_list	*head;
+
+	head = (t_list *)malloc(sizeof(t_list));
+	if (head == NULL)
+		return (0);
+	if (content == NULL)
+	{
+		head->content = NULL;
+		head->content_size = 0;
+	}
+	else
+	{
+		head->content = (void *)malloc(sizeof(*(head->content)) * content_size);
+		if (head->content == NULL)
+		{
+			free (head);
+			return (0);
+		}
+		head->content = ft_memcpy(head->content, content, content_size);
+		head->content_size = content_size;
+		head->next = NULL;
+	}
+	return (head);
+}
+
+void		test_lstdelone()
 {
 	t_list	*list;
 	t_list	*list2;
@@ -34,9 +61,9 @@ void	test_lstdelone()
 	str = "Hello";
 	str2 = "World!";
 	str3 = "Text";
-	list = ft_lstnew(str, sizeof(str));
-	list2 = ft_lstnew(str2, sizeof(str2));
-	list3 = ft_lstnew(str3, sizeof(str3));
+	list = test_lstnew(str, sizeof(str));
+	list2 = test_lstnew(str2, sizeof(str2));
+	list3 = test_lstnew(str3, sizeof(str3));
 	list->next = list2;
 	list2->next = list3;
 	ft_lstdelone(&list2, &del_one);

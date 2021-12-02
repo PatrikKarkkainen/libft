@@ -6,14 +6,14 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:29:10 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/30 14:09:57 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/12/02 17:25:39 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	list_iter(t_list *elem)
+void		list_iter(t_list *elem)
 {
 	int	i;
 
@@ -25,7 +25,34 @@ void	list_iter(t_list *elem)
 	}
 }
 
-void test_lstiter()
+static t_list	*test_lstnew(void const *content, size_t content_size)
+{
+	t_list	*head;
+
+	head = (t_list *)malloc(sizeof(t_list));
+	if (head == NULL)
+		return (0);
+	if (content == NULL)
+	{
+		head->content = NULL;
+		head->content_size = 0;
+	}
+	else
+	{
+		head->content = (void *)malloc(sizeof(*(head->content)) * content_size);
+		if (head->content == NULL)
+		{
+			free (head);
+			return (0);
+		}
+		head->content = ft_memcpy(head->content, content, content_size);
+		head->content_size = content_size;
+		head->next = NULL;
+	}
+	return (head);
+}
+
+void		test_lstiter()
 {
 	t_list	*list;
 	t_list	*list2;
@@ -43,9 +70,9 @@ void test_lstiter()
 	str3 = "Text!";
 	answer = "AAAAAA";
 	answer2 = "AAAAA";
-	list = ft_lstnew(str, sizeof(str));
-	list2 = ft_lstnew(str2, sizeof(str2));
-	list3 = ft_lstnew(str3, sizeof(str3));
+	list = test_lstnew(str, sizeof(str));
+	list2 = test_lstnew(str2, sizeof(str2));
+	list3 = test_lstnew(str3, sizeof(str3));
 	list->next = list2;
 	list2->next = list3;
 	ft_lstiter(list, &list_iter);

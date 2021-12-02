@@ -6,20 +6,61 @@
 /*   By: pkarkkai <pkarkkai@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 14:37:42 by pkarkkai          #+#    #+#             */
-/*   Updated: 2021/11/29 14:56:05 by pkarkkai         ###   ########.fr       */
+/*   Updated: 2021/12/02 17:18:16 by pkarkkai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void    del_add(void *content, size_t size)
+void    	del_add(void *content, size_t size)
 {
 	(void)size;
 	free(content);
 }
 
-void	test_lstadd()
+static void	test_lstdel(t_list **alst, void (*del)(void *, size_t))
+{
+	t_list	*current;
+
+	while (*alst != NULL && alst != NULL)
+	{
+		current = (*alst)->next;
+		(*del)((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = NULL;
+		*alst = current;
+	}
+}
+
+static t_list	*test_lstnew(void const *content, size_t content_size)
+{
+	t_list	*head;
+
+	head = (t_list *)malloc(sizeof(t_list));
+	if (head == NULL)
+		return (0);
+	if (content == NULL)
+	{
+		head->content = NULL;
+		head->content_size = 0;
+	}
+	else
+	{
+		head->content = (void *)malloc(sizeof(*(head->content)) * content_size);
+		if (head->content == NULL)
+		{
+			free (head);
+			return (0);
+		}
+		head->content = ft_memcpy(head->content, content, content_size);
+		head->content_size = content_size;
+		head->next = NULL;
+	}
+	return (head);
+}
+
+void		test_lstadd()
 {
 	t_list	*start;
         t_list  *list;
@@ -35,9 +76,9 @@ void	test_lstadd()
         str2 = "World!";
         str3 = "Text";
 	start = NULL;
-        list = ft_lstnew(str, sizeof(str));
-        list2 = ft_lstnew(str2, sizeof(str2));
-        list3 = ft_lstnew(str3, sizeof(str3));
+        list = test_lstnew(str, sizeof(str));
+        list2 = test_lstnew(str2, sizeof(str2));
+        list3 = test_lstnew(str3, sizeof(str3));
 
 	ft_lstadd(&start, list2);
 	if (*(char *)start->content == *str2)
@@ -65,5 +106,5 @@ void	test_lstadd()
 		printf("Correct: %s\n", str);
 		printf("User: %s\n", (char *)start->content);
 	}
-	ft_lstdel(&start, &del_add);
+	test_lstdel(&start, &del_add);
 }
